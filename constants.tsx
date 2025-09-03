@@ -60,7 +60,7 @@ export const TEAMS: Team[] = [
   {
     name: 'Technical Team',
     members: [
-      { name: 'Sudhanshu Singh', role: 'Technical Lead', imageUrl: '/assets/sudhanshusingh.png', socials: { linkedin: 'https://www.linkedin.com/in/sudhanshu-singh-ss2005?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', github: '#' } },
+      { name: 'Sudhanshu Singh', role: 'Technical Lead', imageUrl: '/GDG-project/assets/sudhanshusingh.png', socials: { linkedin: 'https://www.linkedin.com/in/sudhanshu-singh-ss2005?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', github: '#' } },
       { name: 'Tanuj Kumar', role: 'Technical Vice-Lead', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,person', socials: { linkedin: '#', github: '#' } },
       { name: 'Sourabh Yadav', role: 'Technical Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,person', socials: { linkedin: '#', github: '#' } },
       { name: 'Rahul Goswami ', role: 'Technical Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,person', socials: { linkedin: '#', github: '#' } },

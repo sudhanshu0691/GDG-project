@@ -23,7 +23,7 @@ const GDGLogo = () => {
         <div className="relative w-8 h-8 md:w-10 md:h-10">
           {/* Top row */}
     <img 
-        src="/assets/GDG%20logo.png" 
+        src="/GDG-project/assets/gdg-logo.png" 
         alt="GDG Logo" 
         className="mx-auto h-8 w-auto md:h-30"
     />
