@@ -67,8 +67,29 @@ const TeamDisplay: React.FC = () => {
     return TEAMS.find(team => team.name === selectedTeam);
   }, [selectedTeam]);
 
-  const teamLead = currentTeam?.members.find(m => m.role.toLowerCase().includes('lead'));
-  const teamMembers = currentTeam?.members.filter(m => !m.role.toLowerCase().includes('lead'));
+  // Special handling for Organizer Team and Technical Team
+  const isOrganizerTeam = selectedTeam === 'Organizer Team';
+  const isTechnicalTeam = selectedTeam === 'Technical Team';
+  
+  const teamLead = isOrganizerTeam 
+    ? currentTeam?.members.find(m => m.role.toLowerCase().includes('faculty coordinator'))
+    : isTechnicalTeam
+    ? currentTeam?.members.find(m => m.role.toLowerCase().includes('technical lead'))
+    : currentTeam?.members.find(m => m.role.toLowerCase().includes('lead') && !m.role.toLowerCase().includes('co-'));
+    
+  const coLeader = isOrganizerTeam
+    ? currentTeam?.members.find(m => m.role.toLowerCase().includes('organizer') && !m.role.toLowerCase().includes('co-'))
+    : isTechnicalTeam
+    ? currentTeam?.members.find(m => m.role.toLowerCase().includes('technical vice-lead'))
+    : currentTeam?.members.find(m => m.role.toLowerCase().includes('co-leader'));
+    
+  const teamMembers = isOrganizerTeam
+    ? currentTeam?.members.filter(m => m.role.toLowerCase().includes('co-organizer'))
+    : isTechnicalTeam
+    ? currentTeam?.members.filter(m => m.role.toLowerCase().includes('technical member'))
+    : currentTeam?.members.filter(m => 
+        !m.role.toLowerCase().includes('lead') || m.role.toLowerCase().includes('co-leader')
+      ).filter(m => !m.role.toLowerCase().includes('co-leader'));
 
   return (
     <div id="teams" className="container mx-auto pt-16 md:pt-24 scroll-mt-20">
@@ -96,18 +117,21 @@ const TeamDisplay: React.FC = () => {
       </div>
 
       <div key={selectedTeam} className="space-y-16">
-        {/* Team Lead */}
-        {teamLead && (
+        {/* Team Lead and Co-Leader together */}
+        {(teamLead || coLeader) && (
           <div className="text-center animate-fade-in-up">
-             <h3 className="text-2xl font-bold mb-6 text-slate-700 dark:text-slate-300 tracking-wider uppercase">Team Lead</h3>
-             <TeamCard member={teamLead} index={0} isLead={true} />
+             <h3 className="text-2xl font-bold mb-6 text-slate-700 dark:text-slate-300 tracking-wider uppercase">Leadership</h3>
+             <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+               {teamLead && <TeamCard member={teamLead} index={0} isLead={true} />}
+               {coLeader && <TeamCard member={coLeader} index={1} isLead={true} />}
+             </div>
           </div>
         )}
         
         {/* Team Members */}
         {teamMembers && teamMembers.length > 0 && (
           <div className="text-center">
-            {teamLead && <h3 className="text-2xl font-bold mb-8 text-slate-700 dark:text-slate-300 tracking-wider uppercase">Members</h3>}
+            <h3 className="text-2xl font-bold mb-8 text-slate-700 dark:text-slate-300 tracking-wider uppercase">Members</h3>
             <div className={`grid gap-8 ${
               teamMembers.length === 1 
                 ? 'grid-cols-1 justify-items-center' 
@@ -116,7 +140,7 @@ const TeamDisplay: React.FC = () => {
                 : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
             }`}>
               {teamMembers.map((member, index) => (
-                <TeamCard key={member.name} member={member} index={index + 1} />
+                <TeamCard key={member.name} member={member} index={index + (teamLead ? 1 : 0) + (coLeader ? 1 : 0)} />
               ))}
             </div>
           </div>
