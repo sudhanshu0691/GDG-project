@@ -19,7 +19,7 @@ interface TeamCardProps {
 const TeamCard: React.FC<TeamCardProps> = ({ member, index, isLead = false }) => {
   return (
     <div
-      className={`group relative text-center p-6 rounded-2xl overflow-hidden transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up opacity-0 ${isLead ? 'w-full max-w-sm mx-auto' : 'w-full max-w-sm mx-auto'}`}
+      className={`group relative text-center p-4 sm:p-6 rounded-2xl overflow-hidden transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up opacity-0 ${isLead ? 'w-full max-w-sm mx-auto' : 'w-full max-w-sm mx-auto'}`}
       style={{
         animationDelay: `${index * 80}ms`,
         animationFillMode: 'forwards',
@@ -32,7 +32,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index, isLead = false }) =>
         background: 'radial-gradient(circle at 50% 0%, rgba(66, 133, 244, 0.2), transparent 70%)'
       }}></div>
 
-      <div className="relative w-80 h-80 mx-auto mb-4">
+      <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 mx-auto mb-4">
         <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-google-blue via-google-red to-google-yellow transition-transform duration-500 group-hover:scale-105"></div>
         <img
           src={member.imageUrl}
@@ -41,8 +41,8 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index, isLead = false }) =>
         />
       </div>
       
-      <h3 className="relative text-xl font-bold text-slate-800 dark:text-white">{member.name}</h3>
-      <p className="relative text-google-blue font-mono">{member.role}</p>
+      <h3 className="relative text-lg sm:text-xl font-bold text-slate-800 dark:text-white">{member.name}</h3>
+      <p className="relative text-sm sm:text-base text-google-blue font-mono">{member.role}</p>
       
       <div className="relative mt-4 flex justify-center space-x-4">
         {member.socials?.linkedin && (

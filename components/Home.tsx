@@ -81,12 +81,12 @@ const Home: React.FC<HomeProps> = ({ onNavClick }) => {
                    <svg viewBox="0 0 100 100"><path d="M50 0L100 50L50 100L0 50L50 0Z" fill="currentColor"/></svg>
                 </FloatingShape>
 
-                <div className="relative z-10 space-y-6 animate-fade-in-up">
+                <div className="relative z-10 space-y-4 sm:space-y-6 animate-fade-in-up px-4 sm:px-6">
                     <GdgHeroLogo />
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tight text-slate-800 dark:text-slate-100">
+                    <h1 className="hero-title text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-slate-800 dark:text-slate-100 leading-tight">
                         WHERE <span className="text-google-blue">INNOVATION</span> MEETS <span className="text-google-green">INSPIRATION</span>
                     </h1>
-                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-300">
+                    <p className="hero-subtitle max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 px-2">
                         A student community for developers to learn, connect, and grow with Google technologies.
                     </p>
                 </div>
