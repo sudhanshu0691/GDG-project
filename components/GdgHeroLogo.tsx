@@ -2,7 +2,7 @@ import React from 'react';
 
 const GdgLogoIcon = () => (
     <img 
-        src="/GDG-project/assets/gdg-logo.png" 
+        src="/gdgoncampus-ggct/assets/gdg-logo.png" 
         alt="GDG Logo" 
         className="mx-auto h-30 w-auto md:h-40"
     />
