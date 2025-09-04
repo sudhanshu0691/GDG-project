@@ -1,9 +1,10 @@
 {
+  "$schema": "./node_modules/@types/node/package.json",
   "name": "gdg-student-club",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sudhanshu0691.github.io/gdgoncampus-ggct",
+  "homepage": "https://sudhanshu0691.github.io/GDG-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
