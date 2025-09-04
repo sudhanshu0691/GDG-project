@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sudhanshu0691.github.io/GDG-project",
+  "homepage": "https://sudhanshu0691.github.io/gdgoncampus-ggct",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
