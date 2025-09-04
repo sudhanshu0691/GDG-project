@@ -1,9 +1,13 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "gdg-student-club",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sudhanshu0691.github.io/GDG-project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudhanshu0691/gdgoncampus-ggct.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,7 +25,7 @@
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
     "gh-pages": "^6.3.0",
-    "typescript": "~5.8.2",
+    "typescript": "^5.6.3",
     "vite": "^6.2.0"
   }
 }
