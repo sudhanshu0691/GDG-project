@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/GDG-project/',
+  base: '/gdgoncampus-ggct/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
