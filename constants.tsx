@@ -53,8 +53,8 @@ export const TEAMS: Team[] = [
     name: 'Organizer Team',
     members: [
       { name: 'kamaljeet Singh Kalsi', role: 'Faculty Coordinator', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,leader,professional', socials: { linkedin: '#', github: '#' } },
-      { name: 'Umar Iqbal Haqqani', role: 'Organizer', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,co-leader,executive', socials: { linkedin: '#', github: '#' } },
-      { name: 'Khushi Khullar', role: 'Co-Organizer', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,organizer,manager', socials: { linkedin: '#', github: '#' } },
+      { name: 'Umar Iqbal Haqqani', role: 'Organizer', imageUrl: '/public/assets/umar_haqqani.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Khushi Khullar', role: 'Co-Organizer', imageUrl: '/public/assets/khushi_khullar.jpg', socials: { linkedin: '#', github: '#' } },
     ],
   },
   {
@@ -71,18 +71,18 @@ export const TEAMS: Team[] = [
   {
     name: 'Project Team',
     members: [
-      { name: 'Richa Kushwaha', role: 'Project Lead', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,student', socials: { linkedin: '#', github: '#' } },
-      { name: 'Shivam Kumar', role: 'Project Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,female', socials: { linkedin: '#', github: '#' } },
-      { name: 'Jitesh Kumar', role: 'Project Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,indian', socials: { linkedin: '#', github: '#' } },
+      { name: 'Richa Kushwaha', role: 'Project Lead', imageUrl: '/public/richa_kushwaha.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Shivam Kumar', role: 'Project Member', imageUrl: '/public/shivam_kumar.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Jitesh Kumar', role: 'Project Member', imageUrl: '/public/jitesh_kumar.jpg', socials: { linkedin: '#', github: '#' } },
     ],
   },
   {
     name: 'Designing Team',
     members: [
-      { name: 'Akansha Goswami ', role: 'Designer Lead', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,engineer', socials: { linkedin: '#', github: '#' } },
-      { name: 'Sejal Dhamecha', role: 'Designer Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,professional', socials: { linkedin: '#', github: '#' } },
-      { name: 'Samarth Shukla', role: 'Designer Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,scientist', socials: { linkedin: '#', github: '#' } },
-      { name: 'Yash Raikwar', role: 'Designer Member', imageUrl: 'https://source.unsplash.com/random/300x300/?portrait,researcher', socials: { linkedin: '#', github: '#' } },
+      { name: 'Akansha Goswami ', role: 'Designer Lead', imageUrl: '/public/akansha_goswami.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Sejal Dhamecha', role: 'Designer Member', imageUrl: '/public/sejal_dhamecha.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Samarth Shukla', role: 'Designer Member', imageUrl: '/public/samarth_shukla.jpg', socials: { linkedin: '#', github: '#' } },
+      { name: 'Yash Raikwar', role: 'Designer Member', imageUrl: '/public/yash_raikwar.jpg', socials: { linkedin: '#', github: '#' } },
     ],
   },
   {
